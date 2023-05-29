@@ -15,7 +15,7 @@ const url = 'https://magic-8-ball1.p.rapidapi.com/my_answer/?question=I%20will%2
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'c8075c937dmshed561edd7edc113p168a32jsnb64878dfdf43',
+		'X-RapidAPI-Key': '',
 		'X-RapidAPI-Host': 'magic-8-ball1.p.rapidapi.com'
 	}
 };
