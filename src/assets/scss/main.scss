@@ -1,0 +1,157 @@
+@import url(./toDoList.scss);
+@import url(./searchList.scss);
+@import url(./billSpliter.scss);
+@import url(./logInValidator.scss);
+@import url(./eighthBall.scss);
+@import 'colors';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*:focus-visible {
+	outline: transparent;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	font-family: 'Dancing Script', cursive;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	background-color: #1e1d23;
+	font-size: 24px;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.wrapper {
+	width: 70%;
+	max-width: 600px;
+	z-index: 5;
+}
+
+.heading {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 400px;
+	height: auto;
+	padding: 50px;
+
+	background-position: top 40% left 0;
+	background-size: cover;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #28000074;
+	}
+
+	h1 {
+		font-size: 5rem;
+		margin-bottom: 1rem;
+		text-shadow: 0 0 15px #0000007d;
+		z-index: 2;
+	}
+
+	> p {
+		font-size: 2rem;
+		z-index: 2;
+	}
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 50px auto;
+
+	div {
+		margin: 20px 0;
+
+		label {
+			font-size: 1.5rem;
+			font-weight: 200;
+		}
+	}
+}
+
+label {
+	display: block;
+	font-size: 3rem;
+	margin-bottom: .5em;
+	font-weight: bold;
+	text-shadow: 0 0 15px #0000007d;
+	z-index: 2;
+}
+
+input {
+	width: 100%;
+	border-radius: 8px;
+	padding: 20px 20px;
+	font-size: 20px;
+	z-index: 2;
+}
+
+select {
+	display: block;
+	width: 100%;
+	padding: 20px 20px;
+	border-radius: 8px;
+	font-size: 20px;
+	appearance: none;
+}
+
+button {
+	align-self: flex-end;
+	width: 30%;
+	margin-top: .5em;
+	padding: 20px 40px;
+
+	color: #fff;
+	background: none;
+	font-size: 18px;
+	border: 3px solid #ddd;
+	border-radius: 8px;
+	text-transform: uppercase;
+	transition: 0.3s;
+	z-index: 2;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #ddd;
+	color: #000;
+}
+
+.mssg {
+	display: none;
+	margin-top: .5em;
+	font-size: 1.5rem;
+	font-weight: 200;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.show{
+	display: block;
+}

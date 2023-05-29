@@ -1,0 +1,100 @@
+@import 'colors';
+
+.logIn {
+  position: relative;
+
+  input {
+    outline: .2em solid transparent;
+
+    &::placeholder{
+      color: rgb(173, 173, 173);
+    }
+  }
+
+  .heading {
+    background-image: url(https://cdn.pixabay.com/photo/2020/04/22/15/34/laptop-5078698_1280.jpg);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .logInValidator {
+    display: flex;
+    flex-direction: column;
+
+    .mssg {
+      font-size: 1rem;
+      span {
+        color: $success;
+      }
+    }
+  }
+
+  .logInBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    button:first-of-type {
+      margin-right: 1em;
+    }
+  }
+
+  .popUp {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #ddd;
+    border-radius: 10px;
+
+    z-index: 10;
+
+    .fa-regular {
+      color: #ddd;
+      font-size: 10rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1em;
+      font-size: 2rem;
+    }
+
+    button{
+      align-self: auto;
+    }
+  }
+
+  .showPopUp{
+    display: flex;
+  }
+
+  .logedInPopUp {
+    background-color: $success;
+  }
+
+  .notLogedInPopUp {
+    background-color: $warning;
+  }
+
+  .valid {
+    outline-color: $success;
+  }
+
+  .invalid {
+    outline-color: $warning;
+  }
+
+  .ok {
+    outline-color: $ok;
+  }
+
+  .good {
+    outline-color: $good;
+  }
+}

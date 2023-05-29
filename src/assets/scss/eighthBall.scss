@@ -1,0 +1,112 @@
+@import 'colors';
+
+.eighthBall {
+  .heading {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(https://img.freepik.com/free-photo/transparent-sphere-shimmers-illuminated-wooden-table-generated-by-ai_188544-30553.jpg?w=2000&t=st=1685135004~exp=1685135604~hmac=98c9395fb8d8c270146e43845ee2e46f2949e39e320296a2c0052c603a315237);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+
+    .eightBall {
+      width: 200px;
+    }
+
+    form {
+      justify-content: center;
+      align-items: center;
+
+      label {
+        font-size: 1em;
+        font-weight: 200;
+        text-align: center;
+      }
+
+      button {
+        align-self: center;
+        margin-top: 2.5em;
+      }
+    }
+  }
+
+  .mssg{
+    color: rgb(223, 63, 63);
+  }
+
+  .negative{
+    h2{
+      color: $warning;
+    }
+  }
+
+  .positive{
+    h2{
+      color: $success;
+    }
+  }
+
+  .neutral{
+    h2{
+      color: $good;
+    }
+  }
+
+  .shake {
+    animation: shake 1s ease-in 1;
+  }
+}
+
+.answer{
+  display: none;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1rem;
+
+  span{
+    font-size: 1.5rem;
+    display: inline-block;
+    color: rgb(0, 213, 255);
+    margin: .5rem auto;
+  }
+
+  h2{
+    margin: .5rem auto;
+    font-size: 2.5rem;
+  }
+
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0%);
+  }
+
+  15% {
+    transform: translateX(20%);
+  }
+
+  30% {
+    transform: translateX(-15%)
+  }
+
+  45% {
+    transform: translateX(10%)
+  }
+
+  60% {
+    transform: translateX(-5%)
+  }
+
+  80% {
+    transform: translateX(5%)
+  }
+
+  100% {
+    transform: translateX(0%)
+  }
+}

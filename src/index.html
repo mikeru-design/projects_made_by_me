@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemu_JS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@200;400;800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e6cb18a7d8.js" crossorigin="anonymous"></script>
+    <script type="module" src="index.js"></script>
+  </head>
+
+  <body>
+    <section class="toDoList">
+      <div class="heading">
+        <form id="toDoForm" class="wrapper">
+          <h1> ToDo List</h1>
+          <div>
+            <label for="toDoInput">Add a new toDo or search the existing ones...</label>
+            <input type="text" data-id="toDoInput" id="toDoInput" />
+          </div>
+          <button type="submit" class="addBtn">Add</button>
+        </form>
+      </div>
+
+      <div class="wrapper">
+        <p class="mssg"></p>
+        <div class="toDosContainer">
+          <!-- <div class="toDo">
+            <p class="toDoContent">First To Do</p>
+            <div class="toDoButtons">
+            <button type="button" class="done"><i class="fa-solid fa-check"></i></button>
+            <button type="button" class="edit"><i class="fa-solid fa-pen"></i></button>
+            <button type="button" class="remove"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    </section>
+
+    <section class="drinkListWrapper">
+      <div class="heading">
+        <form class="wrapper" id="searchForm">
+          <label for="searchInput">Search for a drink</label>
+          <input type="text" id="searchInput">
+          <!-- <button type="submit" class="searchBtn">Search</button> -->
+        </form>
+      </div>
+      <div class="wrapper drinksList">
+        <p>List of drinks</p>
+        <ul>
+          <li class="drink">Mleko</li>
+          <li class="drink">Piwo</li>
+          <li class="drink">Whisky</li>
+          <li class="drink">Pepsi</li>
+          <li class="drink">Woda gazowana</li>
+          <li class="drink">Sok jabłkowy</li>
+          <li class="drink">Sok pomarańczowy</li>
+          <li class="drink">Sok bananowy</li>
+          <li class="drink">Sok wieloowocowy</li>
+          <li class="drink">Wino czerwone</li>
+          <li class="drink">Wino białe</li>
+          <li class="drink">Woda niegazowana</li>
+          <li class="drink">Energy drink</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="billSpliter">
+      <div class="heading">
+        <h1 class="title">Billspliter</h1>
+        <p>Split a bill with your friends</p>
+      </div>
+
+      <div class="wrapper mainWrapper">
+        <form class="calculator" id="calculator">
+          <div class="bill">
+            <label for="billValue">Bill to pay</label>
+            <input type="number" name="billValue" id="billValue" min="1" step="0.01" required>
+          </div>
+
+          <div class="person">
+            <label for="peopleAmount">Amount of people</label>
+            <input type="number" name="peopleAmount" id="peopleAmount" min="1" required>
+          </div>
+
+          <div class="tip">
+            <label for="tipAmount">Amount of tip</label>
+            <select name="tipAmount" id="tipAmount" required>
+              <option value="" selected disabled>--   choose an amout of tip   --</option>
+              <option value=0.05>5%</option>
+              <option value=0.1>10%</option>
+              <option value=0.15>15%</option>
+              <option value=0.2>20%</option>
+            </select>
+          </div>
+
+          <button type="submit">calculate</button>
+        </form>
+        <p class="calculatedValue"></p>
+      </div>
+    </section>
+
+    <section class="logIn">
+      <div class="heading">
+        <h1 class="title">LogIn</h1>
+        <p>Log In with your data</p>
+      </div>
+
+      <div class="wrapper mainWrapper">
+        <form class="logInValidator" id="logInValidator">
+
+          <div class="userName">
+            <label for="userName">Type in user name</label>
+            <input type="text" name="userName" id="userName" placeholder="user-Name_10.20" required>
+            <p class="mssg userNameMssg"></p>
+          </div>
+
+          <div class="password">
+            <label for="password">Type in password</label>
+            <input type="text" name="password" id="password" placeholder="te$T10.20" required>
+            <p class="mssg passwordMssg"></p>
+          </div>
+
+          <div class="passwordCheck">
+            <label for="passwordCheck">Repeat password</label>
+            <input type="text" name="passwordCheck" id="passwordCheck" placeholder="te$T10.20" required>
+            <p class="mssg passwordCheckMssg"></p>
+          </div>
+
+          <div class="email">
+            <label for="email">Type in your email adress</label>
+            <input type="email" name="email" id="email" placeholder="my.email@domain.com.uk" required>
+            <p class="mssg emailMssg"></p>
+          </div>
+
+          <div class="logInBtns">
+            <button type="reset">reset</button>
+            <button type="submit">LogIn</button>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="popUp logedInPopUp">
+        <i class="fa-regular fa-circle-check"></i>
+        <p> You have successfully loged in</p>
+        <button type="button">close</button>
+      </div>
+
+      <div class="popUp notLogedInPopUp">
+        <i class="fa-regular fa-circle-xmark"></i>
+        <p> Can not log in. Invalid data.</p>
+        <button type="button">close</button>
+      </div>
+    </section>
+
+    <section class="eighthBall">
+      <div class="heading">
+        <h1 class="title">8th Ball</h1>
+        <p>Fortune anwers in seconds</p>
+      </div>
+
+      <div class="wrapper">
+        <img src="../../Assets/eighthBall/Front_view.png" alt="magic eighth ball" class="eightBall">
+
+        <div class="answer"></div>
+
+        <form id="eighthBallForm">
+          <label for="eighthBallInput">Type in a question</label>
+          <input type="text" name="eighthBallInput" id="eighthBallInput">
+          <p class="mssg"></p>
+          <button type="submit" class="shakeBall">Shake</button>
+        </form>
+      </div>
+    </section>
+  </body>
+
+</html>
